@@ -25,3 +25,9 @@ test("Videos is visible", async ({ page }) => {
   const about = page.locator("h2").filter({ hasText: "Videos" });
   await expect(about).toBeVisible();
 });
+
+test("Contact form is visible", async ({ page }) => {
+  await page.goto("/");
+
+  await expect(page.locator("form")).toBeVisible();
+});
