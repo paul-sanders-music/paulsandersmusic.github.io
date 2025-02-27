@@ -18,7 +18,7 @@ const verifyInput = async (
 test("Inputs are visible, empty and editable", async ({ page }) => {
   await page.goto("/");
 
-  await verifyInput(page, "Name", { exact: true });
-  await verifyInput(page, "Email Address", { exact: true });
-  await verifyInput(page, "Your Message", { exact: true });
+  await verifyInput(page, "Name *", { exact: true });
+  await verifyInput(page, "Email Address *", { exact: true });
+  await verifyInput(page, "Your Message *", { exact: true });
 });
