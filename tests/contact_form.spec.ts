@@ -15,8 +15,26 @@ const verifyInput = async (
   await expect(input).toBeEditable();
 };
 
+test("navbar is visible", async ({ page }) => {
+  await page.goto("/contact");
+
+  await expect(page.locator("nav")).toBeVisible();
+});
+
+test("Header is visible", async ({ page }) => {
+  await page.goto("/contact");
+
+  expect(await page.innerText("h1")).toBe("Contact and Booking");
+});
+
+test("Contact form is visible", async ({ page }) => {
+  await page.goto("/contact");
+
+  await expect(page.locator("form")).toBeVisible();
+});
+
 test("Inputs are visible, empty and editable", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/contact");
 
   await verifyInput(page, "Name *", { exact: true });
   await verifyInput(page, "Email Address *", { exact: true });

@@ -1,0 +1,19 @@
+---
+import "../styles/global.css";
+import ContactForm from "../components/ContactForm.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div id="container" class="container mx-auto flex justify-center text-center items-center mt-5">
+    <main>
+      <h1 class="flex justify-center mt-4">Contact and Booking</h1>
+      <div class="mt-4 mb-4 mx-auto">
+        <img src="img/paul2.jpg" alt="Paul Sanders" class="mx-auto" />
+      </div>
+      <div class="justify-center mt-4">
+        <ContactForm />
+      </div>
+    </main>
+  </div>
+</Layout>
