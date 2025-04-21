@@ -13,7 +13,7 @@
     "@playwright/test": "^1.51.1",
     "@tailwindcss/vite": "^4.1.4",
     "@typescript-eslint/eslint-plugin": "^8.29.1",
-    "@typescript-eslint/parser": "^8.29.1",
+    "@typescript-eslint/parser": "^8.31.0",
     "astro": "^5.7.4",
     "daisyui": "^5.0.27",
     "dotenv": "^16.5.0",
