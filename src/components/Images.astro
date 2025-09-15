@@ -1,21 +1,40 @@
 ---
+import { Image } from "astro:assets";
+
+import fluid1 from "../../public/img/fluid-9-aug-2025/fluid-1.jpeg";
+import fluid2 from "../../public/img/fluid-9-aug-2025/fluid-2.jpeg";
+import pine1 from "../../public/img/pine-knolls-16-aug-2024/PXL_20240816_231556893.jpg";
+import pine2 from "../../public/img/pine-knolls-16-aug-2024/PXL_20240816_231607913.jpg";
+import village1 from "../../public/img/village-beverage-18-jul-2025/signal-2025-07-19-071550_005.jpeg";
+import village10 from "../../public/img/village-beverage-6-apr-2025/PXL_20250406_215301265.jpg";
+import village11 from "../../public/img/village-beverage-6-apr-2025/PXL_20250406_215319926.jpg";
+import village12 from "../../public/img/village-beverage-6-apr-2025/PXL_20250406_233557613.jpg";
+import village2 from "../../public/img/village-beverage-18-jul-2025/signal-2025-07-19-071550_006.jpeg";
+import village3 from "../../public/img/village-beverage-18-jul-2025/signal-2025-07-19-071550_002.jpeg";
+import village4 from "../../public/img/village-beverage-18-jul-2025/signal-2025-07-19-071550_003.jpeg";
+import village5 from "../../public/img/village-beverage-6-apr-2025/PXL_20250406_212243257.jpg";
+import village6 from "../../public/img/village-beverage-6-apr-2025/PXL_20250406_212257125.jpg";
+import village7 from "../../public/img/village-beverage-6-apr-2025/PXL_20250406_212301426.jpg";
+import village8 from "../../public/img/village-beverage-6-apr-2025/PXL_20250406_212308041.jpg";
+import village9 from "../../public/img/village-beverage-6-apr-2025/PXL_20250406_212317469.jpg";
+
 const images = [
-  { src: "/img/fluid-9-aug-2025/fluid-1.jpeg", caption: "FLUID Coffee Roasters" },
-  { src: "/img/fluid-9-aug-2025/fluid-2.jpeg", caption: "FLUID Coffee Roasters" },
-  { src: "/img/village-beverage-18-jul-2025/signal-2025-07-19-071550_005.jpeg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-18-jul-2025/signal-2025-07-19-071550_006.jpeg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-18-jul-2025/signal-2025-07-19-071550_002.jpeg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-18-jul-2025/signal-2025-07-19-071550_003.jpeg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-6-apr-2025/PXL_20250406_212243257.jpg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-6-apr-2025/PXL_20250406_212257125.jpg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-6-apr-2025/PXL_20250406_212301426.jpg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-6-apr-2025/PXL_20250406_212308041.jpg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-6-apr-2025/PXL_20250406_212317469.jpg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-6-apr-2025/PXL_20250406_215301265.jpg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-6-apr-2025/PXL_20250406_215319926.jpg", caption: "Village Beverage" },
-  { src: "/img/village-beverage-6-apr-2025/PXL_20250406_233557613.jpg", caption: "Village Beverage" },
-  { src: "/img/pine-knolls-16-aug-2024/PXL_20240816_231556893.jpg", caption: "Pine Knolls Pub" },
-  { src: "/img/pine-knolls-16-aug-2024/PXL_20240816_231607913.jpg", caption: "Pine Knolls Pub" },
+  { src: fluid1, caption: "FLUID Coffee Roasters" },
+  { src: fluid2, caption: "FLUID Coffee Roasters" },
+  { src: village1, caption: "Village Beverage" },
+  { src: village2, caption: "Village Beverage" },
+  { src: village3, caption: "Village Beverage" },
+  { src: village4, caption: "Village Beverage" },
+  { src: village5, caption: "Village Beverage" },
+  { src: village6, caption: "Village Beverage" },
+  { src: village7, caption: "Village Beverage" },
+  { src: village8, caption: "Village Beverage" },
+  { src: village9, caption: "Village Beverage" },
+  { src: village10, caption: "Village Beverage" },
+  { src: village11, caption: "Village Beverage" },
+  { src: village12, caption: "Village Beverage" },
+  { src: pine1, caption: "Pine Knolls Pub" },
+  { src: pine2, caption: "Pine Knolls Pub" },
 ];
 ---
 
@@ -26,13 +45,15 @@ const images = [
       <button
         type="button"
         class="rounded-xl overflow-hidden shadow-md transition hover:scale-105 image-button"
-        data-src={src}
+        data-src={src.src}
         data-caption={caption}
         data-index={i}
       >
-        <img
+        <Image
           src={src}
           alt={caption}
+          width={400}
+          height={300}
           class="object-cover w-full aspect-video"
           loading="lazy"
         />
